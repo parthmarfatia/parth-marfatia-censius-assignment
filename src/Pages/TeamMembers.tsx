@@ -9,8 +9,8 @@ const TeamMembers = (props: { isDarkMode: Boolean; query: string }) => {
   useEffect(() => {
     setFilteredData((prevData) => {
       return data.filter((val) => {
-        const fullName = `${val.first.toLowerCase()}  ${val.last.toLowerCase()}`;
-        return fullName.includes(query.toLowerCase());
+        const fullName = `${val.first} ${val.last}`;
+        return fullName.toLowerCase().includes(query.toLowerCase());
       });
     });
   }, [query]);
