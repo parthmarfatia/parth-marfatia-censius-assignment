@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import data from "../Data/data.json";
 import Card from "../Components/Card";
 
+import "./TeamMembers.css";
+
 const TeamMembers = (props: { isDarkMode: Boolean; query: string }) => {
   const { isDarkMode, query } = props;
   const [filteredData, setFilteredData] = useState(data);

@@ -1,0 +1,17 @@
+/* Team Members Page */
+
+.team--container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 90%;
+  border-radius: 16px 0 0 0;
+  padding: 3em 0;
+}
+
+@media (max-width: 820px) {
+  .team--container {
+    padding: 0;
+    height: 95%;
+  }
+}

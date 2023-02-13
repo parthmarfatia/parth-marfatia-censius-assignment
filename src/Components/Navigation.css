@@ -1,0 +1,41 @@
+/* Navigation */
+
+.nav--container {
+  display: flex;
+  align-items: center;
+  height: 10%;
+}
+
+.nav--title {
+  font-weight: 600;
+  font-size: 1.25 rem;
+  margin-right: auto;
+  color: #1f2937;
+}
+
+.nav--searchbar {
+  padding: 0 0.75em;
+  height: 32px;
+  width: 256px;
+  background-color: #f9fafb;
+  border: 1px solid #9ca3af;
+  border-radius: 8px;
+}
+
+.nav--searchbar:focus-visible {
+  outline: none;
+}
+
+.nav--icon {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-left: -2em;
+  margin-right: 32px;
+  cursor: pointer;
+}
+
+@media (max-width: 820px) {
+  .nav--container {
+    height: 5%;
+  }
+}

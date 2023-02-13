@@ -10,6 +10,8 @@ import {
   faMoon,
 } from "@fortawesome/free-solid-svg-icons";
 
+import "./SideBar.css";
+
 const SideBar = (props: { isDarkMode: Boolean; setIsDarkMode: Function }) => {
   const { isDarkMode, setIsDarkMode } = props;
   return (
