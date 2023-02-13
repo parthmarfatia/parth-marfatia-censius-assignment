@@ -14,7 +14,7 @@ html {
   height: 100vh;
 }
 
-.nav--main--container {
+.page--container {
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -62,7 +62,7 @@ html {
 .nav--container {
   display: flex;
   align-items: center;
-  padding: 0.75em 2em;
+  height: 10%;
 }
 
 .nav--title {
@@ -91,4 +91,73 @@ html {
   margin-left: -2em;
   margin-right: 32px;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav--container {
+    height: 5%;
+  }
+}
+
+/* Team Members Page */
+
+.team--container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  border-radius: 16px 0 0 0;
+  padding: 3em 5em;
+}
+
+@media (max-width: 768px) {
+  .team--container {
+    padding: 0;
+    height: 95%;
+  }
+}
+
+/* Card */
+
+.card--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  width: 192px;
+  height: 244px;
+  margin: 0 2em 2em 0;
+  box-shadow: 0px 1px 16px 1px rgba(17, 24, 39, 0.05);
+}
+
+.card--image {
+  display: flex;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background-color: #2563eb;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-bottom: 1em;
+  color: white;
+}
+
+.card--title {
+  font-size: 1.25rem;
+}
+
+.card--occupation {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .card--container {
+    margin: 0;
+    padding: 0;
+    transform: scale(0.7);
+  }
 }

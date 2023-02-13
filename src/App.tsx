@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navigation from "./Components/Navigation";
 import SideBar from "./Components/SideBar";
+import TeamMembers from "./Pages/TeamMembers";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -10,8 +11,9 @@ function App() {
       style={{ backgroundColor: isDarkMode ? "#111827" : "#F9FAFB" }}
     >
       <SideBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      <div className="nav--main--container">
+      <div className="page--container">
         <Navigation isDarkMode={isDarkMode} />
+        <TeamMembers isDarkMode={isDarkMode} />
       </div>
     </div>
   );

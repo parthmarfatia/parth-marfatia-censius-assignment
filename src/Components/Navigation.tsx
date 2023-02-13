@@ -16,7 +16,10 @@ const Navigation = (props: { isDarkMode: boolean }) => {
       <input
         placeholder="Search..."
         className="nav--searchbar"
-        style={{ backgroundColor: isDarkMode ? "#1F2937" : "#f9fafb" }}
+        style={{
+          backgroundColor: isDarkMode ? "#1F2937" : "#f9fafb",
+          color: isDarkMode ? "#F3F4F6" : "#1F2937",
+        }}
       />
       <FontAwesomeIcon icon={faSearch} className="nav--icon" />
       {/* <FontAwesomeIcon icon={faXmark} className="nav--icon" /> */}
