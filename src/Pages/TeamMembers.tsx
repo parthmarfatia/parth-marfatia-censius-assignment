@@ -4,8 +4,18 @@ import Card from "../Components/Card";
 
 const TeamMembers = (props: { isDarkMode: Boolean; query: string }) => {
   const { isDarkMode, query } = props;
+  const [filteredData, setFilteredData] = useState(data);
 
-  const displayData = data.map((val) => (
+  useEffect(() => {
+    setFilteredData((prevData) => {
+      return data.filter((val) => {
+        const fullName = `${val.first.toLowerCase()}  ${val.last.toLowerCase()}`;
+        return fullName.includes(query.toLowerCase());
+      });
+    });
+  }, [query]);
+
+  const displayData = filteredData.map((val) => (
     <Card key={val.id} val={val} isDarkMode={isDarkMode} />
   ));
 
