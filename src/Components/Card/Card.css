@@ -34,11 +34,3 @@
   font-size: 0.75rem;
   color: #6b7280;
 }
-
-@media (max-width: 820px) {
-  .card--container {
-    margin: 0;
-    padding: 0;
-    transform: scale(0.7);
-  }
-}
