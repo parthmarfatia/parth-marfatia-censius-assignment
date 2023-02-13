@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Navigation from "./Components/Navigation";
-import SideBar from "./Components/SideBar";
+import Navigation from "./Components/Navigation/Navigation";
+import SideBar from "./Components/SideBar/SideBar";
 import TeamMembers from "./Pages/TeamMembers";
 
 function App() {

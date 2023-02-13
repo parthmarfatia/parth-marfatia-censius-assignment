@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import data from "../Data/data.json";
-import Card from "../Components/Card";
+import Card from "../Components/Card/Card";
 
 import "./TeamMembers.css";
 
