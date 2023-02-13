@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Navigation from "./Components/Navigation";
 import SideBar from "./Components/SideBar";
 import TeamMembers from "./Pages/TeamMembers";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [query, setQuery] = useState("");
   return (
     <div
       className="app--container"
@@ -12,8 +13,8 @@ function App() {
     >
       <SideBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <div className="page--container">
-        <Navigation isDarkMode={isDarkMode} />
-        <TeamMembers isDarkMode={isDarkMode} />
+        <Navigation isDarkMode={isDarkMode} query={query} setQuery={setQuery} />
+        <TeamMembers isDarkMode={isDarkMode} query={query} />
       </div>
     </div>
   );

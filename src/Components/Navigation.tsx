@@ -3,8 +3,12 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faXmark } from "@fortawesome/free-solid-svg-icons";
 
-const Navigation = (props: { isDarkMode: boolean }) => {
-  const { isDarkMode } = props;
+const Navigation = (props: {
+  isDarkMode: boolean;
+  query: string;
+  setQuery: Function;
+}) => {
+  const { isDarkMode, query, setQuery } = props;
   return (
     <nav className="nav--container">
       <h2
@@ -20,9 +24,18 @@ const Navigation = (props: { isDarkMode: boolean }) => {
           backgroundColor: isDarkMode ? "#1F2937" : "#f9fafb",
           color: isDarkMode ? "#F3F4F6" : "#1F2937",
         }}
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
       />
-      <FontAwesomeIcon icon={faSearch} className="nav--icon" />
-      {/* <FontAwesomeIcon icon={faXmark} className="nav--icon" /> */}
+      {query === "" ? (
+        <FontAwesomeIcon icon={faSearch} className="nav--icon" />
+      ) : (
+        <FontAwesomeIcon
+          icon={faXmark}
+          className="nav--icon"
+          onClick={() => setQuery("")}
+        />
+      )}
     </nav>
   );
 };
